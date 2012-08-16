@@ -1,0 +1,13 @@
+# OASIS_START
+# DO NOT EDIT (digest: 6cd2a7744bd736a654dd9a996620c53d)
+version = "0.1"
+description =
+"This is a driver for the Factual API. It provides a type-safe, easy way to generate queries, setup OAuth authentication and send queries to the API."
+requires = "batteries netstring ooauth yojson"
+archive(byte) = "factual.cma"
+archive(byte, plugin) = "factual.cma"
+archive(native) = "factual.cmxa"
+archive(native, plugin) = "factual.cmxs"
+exists_if = "factual.cma"
+# OASIS_STOP
+

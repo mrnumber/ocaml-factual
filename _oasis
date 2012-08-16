@@ -1,0 +1,27 @@
+OASISFormat: 0.3
+Name:        factual
+Version:     0.1
+Synopsis:    This is a driver for the Factual API. It provides a type-safe,
+  easy way to generate queries, setup OAuth authentication and send queries
+  to the API.
+Authors:     Ryland Degnan
+License:     BSD3
+Plugins:     META (0.3)
+
+Library factual
+  Path:       src
+  BuildTools: ocamlbuild
+  Modules:    Factual
+  BuildDepends: batteries, netstring, ooauth, yojson
+
+Executable test
+  Path:         test
+  BuildTools:   ocamlbuild
+  MainIs:       test.ml
+  BuildDepends: batteries, oUnit, factual
+  Install:      false
+  Build$:       flag(tests)
+
+Test main
+  Run$:    flag(tests)
+  Command: $test
